@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>수업 자료 링크</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #667085;
+      --paper: #f7f4ef;
+      --panel: #ffffff;
+      --line: #ded7ce;
+      --accent: #0f766e;
+      --warm: #b45309;
+      --shadow: 0 18px 42px rgba(31, 41, 51, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.8), rgba(247,244,239,0.98)),
+        radial-gradient(circle at 14% 12%, rgba(15,118,110,0.13), transparent 30%),
+        radial-gradient(circle at 88% 4%, rgba(180,83,9,0.13), transparent 28%),
+        var(--paper);
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(760px, calc(100% - 36px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      align-content: center;
+      padding: 52px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--warm);
+      font-size: 0.94rem;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+      word-break: keep-all;
+    }
+
+    .lead {
+      margin: 18px 0 30px;
+      color: #344054;
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
+      word-break: keep-all;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-card {
+      display: grid;
+      gap: 6px;
+      padding: 20px 22px;
+      color: inherit;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .link-card:hover,
+    .link-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(15,118,110,0.55);
+      box-shadow: 0 22px 48px rgba(15, 118, 110, 0.15);
+      outline: 0;
+    }
+
+    .link-card strong {
+      color: var(--accent);
+      font-size: 1.12rem;
+      word-break: keep-all;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 0.96rem;
+      word-break: keep-all;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        align-content: start;
+        padding-top: 42px;
+      }
+
+      .link-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">수업 자료</div>
+    <h1>링크 모음</h1>
+    <p class="lead">강의 보조 글과 발표 자료를 한곳에 모았다.</p>
+
+    <div class="links" aria-label="수업 자료 링크">
+      <a class="link-card" href="samsung_labor_relations_people_first.html">
+        <strong>삼성전자 노사관계 글 보기</strong>
+        <span>사람 중심 경영과 노사관계 관점 정리</span>
+      </a>
+      <a class="link-card" href="hwang_vs_lee_ai_capitalism.html">
+        <strong>젠슨 황 vs 이재용 글 보기</strong>
+        <span>AI 자본주의와 한국식 오너 자본주의 비교</span>
+      </a>
+      <a class="link-card" href="starbucks_leadership_comparison_green_EN.pptx" download>
+        <strong>PPTX 자료 다운로드</strong>
+        <span>수업 발표용 자료 파일</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
